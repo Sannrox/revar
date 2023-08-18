@@ -23,5 +23,10 @@ export GO_MODULE_URL
 
 
 
+
 source "${ROOT_PATH}/scripts/lib/golang.sh"
 source "${ROOT_PATH}/scripts/lib/version.sh"
+source "${ROOT_PATH}/scripts/lib/util.sh"
+
+OUTPUT_HOSTBINPATH="${OUTPUT_BINPATH}/$(util::host_platform)"
+export OUTPUT_HOSTBINPATH

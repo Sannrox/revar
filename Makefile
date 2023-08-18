@@ -7,15 +7,23 @@ MAKEFLAGS += --no-builtin-rules
 .SUFFIXES:
 
 
+.PHONY: test
 test:
 	./scripts/make-targets/test.sh
 
+.PHONY: test-cmd
+test-cmd:
+	./scripts/make-targets/test-cmd.sh
+
+.PHONY: validate
 validate:
 	./scripts/make-targets/validate.sh
 
+.PHONY: update
 update:
 	./scripts/make-targets/update.sh
 
+.PHONY: clean
 clean:
 	./scripts/make-targets/clean.sh
 
